@@ -49,7 +49,7 @@ class YTDatabase:
     return imageByteArray
 
   def getImage(self,youtube_id):
-    url = 'https://i.ytimg.com/vi/'+self.youtube_id+'/mqdefault.jpg'
+    url = 'https://i.ytimg.com/vi/'+youtube_id+'/mqdefault.jpg'
     imageResponse = requests.get(url)
     image = Image.open(BytesIO(imageResponse.content))
     return image
