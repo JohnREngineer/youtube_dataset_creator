@@ -71,7 +71,7 @@ class YTDatabase:
           finalIndexes.append(int(key))
       self.dfFinal = self.df.loc[[index in finalIndexes for index in self.df.index]].reset_index(drop=True)
       # self.vidDisplay.layout.visibility = 'hidden'
-      self.vidDisplay.layout.display = 'none'
+      # self.vidDisplay.layout.display = 'none'
       # self.vidDisplay.disabled = True
       self.finalButton.get('final').disabled = True
 
