@@ -1,3 +1,4 @@
+from youtube_transcript_api import YouTubeTranscriptApi
 import time
 import pandas as pd
 import requests
