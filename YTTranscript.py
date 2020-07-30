@@ -31,12 +31,12 @@ class YTTranscript:
             s = self.getWaitSeconds(1,800)
             end = timer()
             elapsed = (end - start)
-            print(elapsed,s-elapsed)
+            if verbose: print(elapsed,s-elapsed)
             if elapsed < s:
               time.sleep(s-elapsed)
             if exception == 0:
               self.df.at[row.Index,'transcript'] = transcript
-              print(row.Index, row.youtube_id, 'success', retried_text)
+              if verbose: print(row.Index, row.youtube_id, 'success', retried_text)
             else:
               print(row.Index, row.youtube_id, 'youtube fail', retried_text)
               if verbose: print(str(exception))
@@ -44,7 +44,7 @@ class YTTranscript:
             print(row.Index, row.youtube_id, 'proxy fail', retried_text)
             if verbose: print(str(exception))
       else:
-        print(row.Index, row.youtube_id, 'skip')
+        if verbose: print(row.Index, row.youtube_id, 'skip')
   
   def getTranscript(self,youtube_id,proxy=None,cookie=None):
     video_error = False
