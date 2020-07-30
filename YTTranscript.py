@@ -9,7 +9,7 @@ from timeit import default_timer as timer
 
 class YTTranscript:
 
-  def __init__(self,df):
+  def __init__(self,df,verbose = False):
     df = df.loc[[len(ytid)>0 for ytid in df.youtube_id]]
     df = df.reset_index(drop=True)
     df['transcript'] = [[] for _ in df.index]
@@ -42,7 +42,7 @@ class YTTranscript:
               print(row.Index, row.youtube_id, 'youtube fail', retried_text)
               if verbose: print(str(exception))
           else:
-            print(row.Index, row.youtube_id, 'proxy fail', retried_text)
+            if verbose: print(row.Index, row.youtube_id, 'proxy fail', retried_text)
             if verbose: print(str(exception))
       else:
         if verbose: print(row.Index, row.youtube_id, 'skip')
