@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup as bs
 from requests.adapters import HTTPAdapter
 from timeit import default_timer as timer
 
-class YTTranscript:
+class YouTubeDownload:
 
   def __init__(self,df,verbose = False):
     df = df.loc[[len(ytid)>0 for ytid in df.youtube_id]]
