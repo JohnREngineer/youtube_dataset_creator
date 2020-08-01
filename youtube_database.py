@@ -11,7 +11,7 @@ from google.colab.patches import cv2_imshow
 from matplotlib.pyplot import imshow
 import numpy as np
 
-class YTDatabase:
+class YouTubeDatabase:
 
   def __init__(self,tuples,columns=['name','keyword','youtube_id','title','description','channel']):
     df = pd.DataFrame(tuples,columns=columns)
