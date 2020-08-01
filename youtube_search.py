@@ -4,7 +4,7 @@ import googleapiclient.discovery
 import googleapiclient.errors
 import html
 
-class YTSearch:
+class YouTubeSearch:
   
   def __init__(self,base_dir):
     scopes = ["https://www.googleapis.com/auth/youtube.force-ssl"]
