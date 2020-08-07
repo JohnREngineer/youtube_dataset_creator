@@ -8,3 +8,5 @@ This allows for a modular dataset design so that we can easily add or remove res
 <img src="https://github.com/JohnRResearch/YouTubeDatasetCreator/blob/master/documentation/Search.png">
 
 This greatly speeds up the creation of datasets for NLP applications such as authorship identification, sentiment analysis, or predictive text generation.
+
+For further details, please see [YouTubeDatasetCreator.ipynb](https://github.com/JohnRResearch/YouTubeDatasetCreator/blob/master/YouTubeDatasetCreator.ipynb) which walks through creating a dataset with this tool.
