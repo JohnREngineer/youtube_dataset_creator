@@ -39,8 +39,9 @@ class YouTubeDownload:
               self.df.at[row.Index,'transcript'] = transcript
               if verbose: print(row.Index, row.youtube_id, 'success', retried_text)
             else:
-              print(row.Index, row.youtube_id, 'youtube fail', retried_text)
-              if verbose: print(str(exception))
+              if verbose: 
+                print(row.Index, row.youtube_id, 'youtube fail', retried_text)
+                print(str(exception))
           else:
             if verbose: print(row.Index, row.youtube_id, 'proxy fail', retried_text)
             if verbose: print(str(exception))
