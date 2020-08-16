@@ -1,4 +1,4 @@
-# YouTube Dataset Creator
+# YouTube Transcript Dataset Creator
 
 The goal of this project is to create a UI that facilitates the creation of NLP datasets from YouTube transcripts.
 Instead of manually searching and curating videos, we enter the search term and then determine which videos to add using the UI.
